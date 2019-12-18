@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="container">
+        <h2>Password Generator</h2>
         <div class='pwcontainer'>
-            <h2>Password Generator</h2>
             <span id='result'></span>
             <button class="button" id='clipboard'>
-                <i class='result-clipboard'></i>
+                <!-- <i class='clipboard'></i> -->
             </button>
         </div>
         <div class='pw-settings'>
@@ -21,7 +21,7 @@
                 <label>Password Length</label>
                 <input type='number' id='length' rows=5 min='8' max='128' value='8'>
             </div>
-            <div class='pw-settings'>
+            <div class='pw-choice'>
                 <label>Uppercase Letters</label>
                 <input type="checkbox" id='uppercae'>
             </div>
@@ -33,11 +33,11 @@
                 <label>Symbols</label>
                 <input type="checkbox" id='symbols'>
             </div>
-            <div class='pw-settings'>
+            <div class='pw-choice'>
                 <label>Numbers</label>
                 <input type="checkbox" id='numbers'>
             </div>
-            <button class='buttonn button-large' id='generate'>
+            <button class='button button-large' id='generate'>
                 Generate Password
             </button>
         </div>

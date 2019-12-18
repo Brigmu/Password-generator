@@ -1,0 +1,77 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkblue;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.container {
+    background-color: goldenrod;
+    color: black;
+    padding: 15px 30px 15px 20px;
+    border: 5px solid black;
+    width: 325px;
+    max-width: 100%;
+}
+
+h2 {
+    margin: 5px 0 15px;
+    text-align: center;
+}
+
+.pwcontainer {
+    background-color: gold;
+    display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	font-size: 18px;
+	padding: 10px 8px;
+	height: 30px;
+	width: 100%;
+}
+
+.pwcontainer #result {
+    word-wrap: break-word;
+  max-width: calc(100% - 30px);
+}
+
+.pwcontainer .button {
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.button {
+	border: 2px black solid;
+	color: black;
+	font-size: 16px;
+	padding: 8px 12px;
+	background-color: gold;
+}
+
+.button-large {
+	display: block;
+	width: 100%;
+}
+
+.pw-choice {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 15px 0;
+}
+

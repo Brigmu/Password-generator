@@ -7,8 +7,8 @@ let symbolsEl = document.querySelector('#symbols');
 let generateEl = document.querySelector('#generate');
 
 let randomFunc = {
-    lower: getRandomLower,
     upper: getRandomUpper,
+    lower: getRandomLower,
     symbol: getRandomSymbol,
     number: getRandomNumber
 };
@@ -17,19 +17,19 @@ generateEl.addEventListener('click', () => {
     let length = +lengthEl.value;
     let hasLower = lowercaseEl.checked;
     let hasUpper = uppercaseEl.checked;
-    let hasNumber = numbersEl.checked;
     let hasSymbol = symbolsEl.checked;
+    let hasNumber = numbersEl.checked;
 
-    resultEl.innerText = generatePassword (hasLower, hasUpper, hasNumber, hasSymbol, length);
+    resultEl.innerText = generatePassword (hasUpper, hasLower, hasNumber, hasSymbol, length);
 });
 
-function generatePassword(upper, lower, number, symbol, length) {
+function generatePassword(upper, lower, symbol, number, length) {
     let generatedPassword = new Array(length);
     for (i = 0; i < generatedPassword.length; i++){
         generatedPassword[i] = 'undefined';
     }
-    let typesCount = lower + upper + number + symbol;
-    let typesArray = [{lower}, {upper}, {number}, {symbol}];
+    let typesCount = upper + lower + number + symbol;
+    let typesArray = [{upper}, {lower}, {number}, {symbol}];
     let filteredArray = typesArray.filter(item => Object.values(item)[0]);
 
     // console.log(generatedPassword);

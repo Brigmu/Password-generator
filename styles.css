@@ -43,7 +43,7 @@ h2 {
 
 .pwcontainer #result {
     word-wrap: break-word;
-  max-width: calc(100% - 30px);
+  max-width: 100%;
 }
 
 .pwcontainer .button {
@@ -66,6 +66,22 @@ h2 {
 .button-large {
 	display: block;
 	width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+.button-med {
+    display: block;
+    width: 75%;
+    margin-top: 5px;
+}
+
+.button-small {
+    display: block;
+    width: 50%;
+    margin-top: 5px;
 }
 
 .pw-choice {

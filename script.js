@@ -5,6 +5,10 @@ let lowercaseEl = document.querySelector('#lowercase');
 let numbersEl = document.querySelector('#numbers');
 let symbolsEl = document.querySelector('#symbols');
 let generateEl = document.querySelector('#generate');
+let clipboardEl = document.querySelector('#clipboard');
+let collapseEl = document.querySelector('#collapse');
+let collapseableEl = document.querySelector('.collapseable');
+let pwcontaineerEl = document.querySelector('.pwcontainer');
 
 let randomFunc = {
     upper: getRandomUpper,
@@ -23,7 +27,35 @@ generateEl.addEventListener('click', () => {
     resultEl.innerText = generatePassword (hasUpper, hasLower, hasNumber, hasSymbol, length);
 });
 
+clipboardEl.addEventListener('click', () => {
+    let textArea = document.createElement('textarea');
+    let password = resultEl.innerText;
+
+    if (!password){
+        return;
+    }
+
+    textArea.value = password;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    textArea.remove();
+    alert('Password copied to clipboard');
+})
+
+collapseEl.addEventListener('click', () => {
+    if (collapseableEl.style.display === 'none') {
+        collapseableEl.style.display = 'block';
+        collapseEl.innerText = 'Hide';
+    }
+    else {
+        collapseableEl.style.display = 'none';
+        collapseEl.innerText = 'Show';
+    }
+})
+
 function generatePassword(upper, lower, symbol, number, length) {
+    pwcontaineerEl.style.height = '30px';
     let generatedPassword = new Array(length);
     for (i = 0; i < generatedPassword.length; i++){
         generatedPassword[i] = 'undefined';
@@ -38,6 +70,18 @@ function generatePassword(upper, lower, symbol, number, length) {
 
     if (typesCount === 0) {
         return '';
+    }
+
+    if (length < 8 || length > 128) {
+        return '';
+    }
+
+    if (length > 60  && length <= 100) {
+        pwcontaineerEl.style.height = '60px';
+    }
+
+    if (length > 100) {
+        pwcontaineerEl.style.height = '90px';
     }
     
         for (let i = 0; i < filteredArray.length; i++){
@@ -62,13 +106,13 @@ function generatePassword(upper, lower, symbol, number, length) {
             let index = Math.floor(Math.random() * filteredArray.length);
             let name = Object.keys(filteredArray[index]);
             generatedPassword[j] = randomFunc[name]();
-            console.log('name ' + name);
-            console.log(generatedPassword);
+            // console.log('name ' + name);
+            // console.log(generatedPassword);
         }
     }
 
     let finalPassword = generatedPassword.join('');
-    console.log(finalPassword);
+    // console.log(finalPassword);
     
     return finalPassword;
 

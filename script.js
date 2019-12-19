@@ -76,8 +76,12 @@ function generatePassword(upper, lower, symbol, number, length) {
         return '';
     }
 
-    if (length > 60  && length <= 100) {
-        pwcontaineerEl.style.height = '60px';
+    if (length > 40  && length <= 70) {
+        pwcontaineerEl.style.height = '50px';
+    }
+
+    if (length > 70 && length <= 100) {
+        pwcontaineerEl.style.height = '70px';
     }
 
     if (length > 100) {

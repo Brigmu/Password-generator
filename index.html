@@ -12,9 +12,6 @@
         <h2>Password Generator</h2>
         <div class='pwcontainer'>
             <span id='result'></span>
-            <button class="button" id='clipboard'>
-                <!-- <i class='clipboard'></i> -->
-            </button>
         </div>
         <div class='pw-settings'>
             <div class='pw-choice'>
@@ -23,26 +20,43 @@
             </div>
             <div class='pw-choice'>
                 <label>Uppercase Letters</label>
-                <input type="checkbox" id='uppercae'>
+                <input type="checkbox" id='uppercase' checked>
             </div>
             <div class='pw-choice'>
                 <label>Lowercase Letters</label>
-                <input type="checkbox" id='lowercase'>
+                <input type="checkbox" id='lowercase' checked>
             </div>
             <div class='pw-choice'>
                 <label>Symbols</label>
-                <input type="checkbox" id='symbols'>
+                <input type="checkbox" id='symbols' checked>
             </div>
             <div class='pw-choice'>
                 <label>Numbers</label>
-                <input type="checkbox" id='numbers'>
+                <input type="checkbox" id='numbers' checked>
             </div>
             <button class='button button-large' id='generate'>
                 Generate Password
             </button>
+            <div class='buttons'>
+                <button class="button button-med" id='clipboard'>
+                    Copy to clipboard
+                </button>
+            </div>
+            <div class = 'buttons'>
+                <button class = 'button button-small' id = collapse>
+                    Hide
+                </button>
+            </div>
         </div>
+    </div>
+    <div class = 'container collapseable'>
+        <h2>Instructions</h2>
+        <div class = 'text'>
+            <p>Choose at least one checkbox with the type you want and a length from 8 to 128 characters. Then click the button to generate password to get your new password. Copy to clipboard after and use!  Click the hide button to hide/show these instructions.</p>
+        </div>
+    </div>
 
-        <script src = 'main.js'>
+        <script src = 'script.js'>
         </script>
 </body>
 </html>

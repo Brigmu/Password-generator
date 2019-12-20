@@ -24,7 +24,7 @@ generateEl.addEventListener('click', () => {
     let hasSymbol = symbolsEl.checked;
     let hasNumber = numbersEl.checked;
 
-    resultEl.innerText = generatePassword (hasUpper, hasLower, hasNumber, hasSymbol, length);
+    resultEl.innerText = generatePassword (hasUpper, hasLower, hasSymbol, hasNumber, length);
 });
 
 clipboardEl.addEventListener('click', () => {

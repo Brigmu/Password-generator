@@ -12,7 +12,7 @@ Only required installation to use this project is your choice of web browser.
 
 ## Usage
 
-![SitePhoto](/images/pwgen-screenshot.png)
+![SitePhoto](/Images/pwgen-screenshot.png)
 
 Instructions are on the website if needed.  Open web browser and go to [brigmu.github.io/Password-generator](brigmu.github.io/Password-generator) to begin.  Then un-check or check whatever characters you would like in the password, enter a digit length from 8 to 128, then click generate password to get the password.  Once generated, the copy to clipboard will copy that password to the clipboard for use elsewhere.
 
